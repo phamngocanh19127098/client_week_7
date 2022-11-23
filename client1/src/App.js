@@ -9,10 +9,10 @@ function App() {
 
   // Actors States
   const [actors, setActors] = useState([]);
-  
+
   useEffect(() => {
     socket.emit('findAllActors')
-}, []);
+  }, []);
 
 
   useEffect(() => {
@@ -30,9 +30,9 @@ function App() {
 
   return (
     <div className="App">
-        <ListUser actors = {actors} />
+      <ListUser actors={actors} />
     </div>
-    
+
   );
 }
 
