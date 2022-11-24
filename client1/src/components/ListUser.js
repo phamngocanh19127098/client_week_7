@@ -6,6 +6,9 @@ const ListUser = (props) => {
                     <thead class="border-4 text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="py-3 px-6">
+                                Actor ID
+                            </th>
+                            <th scope="col" class="py-3 px-6">
                                 Lastname
                             </th>
                             <th scope="col" class="py-3 px-6">
@@ -17,8 +20,11 @@ const ListUser = (props) => {
                         {props.actors.map((person, index) => (
                             <tr key={index} class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    {person.firstName}
+                                    {person.actorId}
                                 </th>
+                                <td class="py-4 px-6">
+                                    {person.firstName}
+                                </td>
                                 <td class="py-4 px-6">
                                     {person.lastName}
                                 </td>
